@@ -1,4 +1,3 @@
-import Head from "next/head";
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { CopyToClipboard } from "react-copy-to-clipboard";
@@ -93,9 +92,6 @@ const Footer = () => {
 
   return (
     <>
-      <Head>
-        <link rel="stylesheet" type="text/css" href="/static/styles.css" />
-      </Head>
       <footer className="footer" style={{ textAlign: "center" }}>
         <p> © 2023 cmoonjun11@gmail.com</p>
         <FlexContainer>

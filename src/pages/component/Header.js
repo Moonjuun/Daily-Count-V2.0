@@ -6,11 +6,11 @@ function Header() {
   return (
     <Navbar bg="light" expand="lg">
       <Container>
-        <Navbar.Brand href="/Calculator/CommonCal">Daily Count</Navbar.Brand>
+        <Navbar.Brand href="/">Daily Count</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="/Calculator/CommonCal">일반 계산기</Nav.Link>
+            <Nav.Link href="/">일반 계산기</Nav.Link>
             <Nav.Link href="#link">단위 계산기</Nav.Link>
             <Nav.Link href="#link">이자 계산기</Nav.Link>
             <Nav.Link href="#link">시급 계산기</Nav.Link>
