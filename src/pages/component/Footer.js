@@ -120,7 +120,7 @@ const Footer = () => {
             </CopyToClipboard>
             <KakaoButtonWrapper>
               <KakaoShareButton onClick={handleKakaoButton}>
-                <KakaoIcon src="/assets/kakaoIcon.png"></KakaoIcon>
+                <KakaoIcon src="/assets/kakaoIcon1.png"></KakaoIcon>
               </KakaoShareButton>
             </KakaoButtonWrapper>
           </GridContainer>
