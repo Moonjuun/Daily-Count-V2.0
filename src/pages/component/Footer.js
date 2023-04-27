@@ -96,7 +96,7 @@ const Footer = () => {
       <Head>
         <link rel="stylesheet" type="text/css" href="/static/styles.css" />
       </Head>
-      <div style={{ textAlign: "center" }}>
+      <footer className="footer" style={{ textAlign: "center" }}>
         <p> © 2023 cmoonjun11@gmail.com</p>
         <FlexContainer>
           <h5>공유하기</h5>
@@ -125,7 +125,7 @@ const Footer = () => {
             </KakaoButtonWrapper>
           </GridContainer>
         </FlexContainer>
-      </div>
+      </footer>
     </>
   );
 };
