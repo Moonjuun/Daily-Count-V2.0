@@ -1,0 +1,53 @@
+.footer {
+  padding-top: 30px;
+  background-color: #ececec;
+}
+
+.CommonCal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.calculator {
+  width: 100%;
+  text-align: center;
+}
+
+.ButtonToolbar {
+  width: 100%;
+}
+
+.CommonCal .result {
+  height: 60px;
+  background-color: #ececec;
+  width: 80%;
+  align-items: center;
+  border-radius: 5px;
+  font-size: 40px;
+  margin-bottom: 10px;
+  color: #000000;
+  text-align: right;
+  padding-right: 10px;
+}
+
+.CommonCal .button {
+  display: inline-block;
+  width: 20%;
+  height: 80px;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 500;
+  margin: auto;
+  border: 1px solid;
+}
+
+.CommonCal .calculator {
+  align-items: center;
+}
+
+.jb-division-line {
+  border-top: 1px solid #ececec;
+  margin: 30px 0px;
+}
