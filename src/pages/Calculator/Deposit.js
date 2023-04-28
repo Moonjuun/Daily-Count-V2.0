@@ -5,6 +5,7 @@ import Nav from "react-bootstrap/Nav";
 import { useRouter } from "next/router";
 import { commaFormat } from "../../utils/util";
 import Button from "react-bootstrap/Button";
+import Head from "next/head";
 
 const Deposit = () => {
   const router = useRouter();
@@ -162,188 +163,234 @@ const Deposit = () => {
   };
 
   return (
-    <Container style={{ width: "80%" }}>
-      <h1 style={{ marginTop: "10px" }}>예금 계산기</h1>
-      <Nav
-        fill
-        variant="tabs"
-        defaultActiveKey="/"
-        onSelect={handleSelect}
-        style={{ marginTop: "10px", marginBottom: "20px" }}
-      >
-        <Nav.Item>
-          <Nav.Link href="/Calculator/Interest">적금</Nav.Link>
-        </Nav.Item>
-        <Nav.Item>
-          <Nav.Link eventKey="/Calculator/Deposit">예금</Nav.Link>
-        </Nav.Item>
-      </Nav>
-      <div className="Interest">
-        <Form onSubmit={handleSubmit}>
-          <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-            <Form.Label>
-              <h5>예치 금액</h5>
-            </Form.Label>
-            <Form.Control
-              type="number"
-              min="0"
-              name="monthlyDeposit"
-              value={inputValues.monthlyDeposit}
-              onChange={handleInputChange}
-              required
-            />
-            <Form.Label
-              style={{ float: "right", fontWeight: "500", marginTop: "10px" }}
+    <>
+      <Head>
+        <title>Dail Count 데일리 카운트 - 예금 계산기</title>
+        <meta charset="utf-8" />
+        <meta name="referrer" content="always" />
+        <meta
+          name="description"
+          content="데일리 카운트, 당신의 일상 속 모든 계산기, 예금 계산기"
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+        <meta
+          name="naver-site-verification"
+          content="67f0f075f4772fe9f2d3c370f0ffc4f63ee2120d"
+        />
+        <meta
+          name="keywords"
+          content="데일리 카운트, 계산기, 일반 계산, 이자 계산기, 적금 계산기, 예금 계산기, 만나이 계산기, 시급 계산, 단위 환산, 단위 계산, 날짜 계산, 글자수 계산, 비만도 계산, 퍼센트 계산, 길이 계산, 넓이 계산, 무게 계산, 부피 계산, 온도 계산, 압력 계산, 속도 계산, 연비 계산, 데이터 계산"
+        />
+        <meta name="robots" content="index,follow" />
+        <meta
+          property="og:site_name"
+          content="Daily Count 데일리 카운트, 당신의 일상 속 계산기 - 예금 계산기"
+        />
+        <meta
+          property="og:image"
+          content="/DailyCount.png"
+          alt="Daily Count 데일리 카운트, 당신의 일상 속 계산기 - 예금 계산기"
+        />
+        <meta
+          property="og:title"
+          content="daily-count 데일리 카운트, 당신의 일상 속 계산기 - 예금 계산기"
+        />
+        <meta
+          property="og:description"
+          content="데일리 카운트, 당신의 일상 속 계산기 - 예금 계산기"
+        />
+        <meta property="og:url" content="https://www.daily-count.com" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="Daily Count 데일리 카운트" />
+        <meta
+          name="twitter:description"
+          content="데일리 카운트, 당신의 일상 속 모든 계산기, 계산기, 일반 계산, 이자 계산, 만나이 계산기, 적금 계산기, 예금 계산기, 시급 계산, 단위 환산, 단위 계산, 날짜 계산, 글자수 계산, 비만도 계산, 퍼센트 계산, 길이 계산, 넓이 계산, 무게 계산, 부피 계산, 온도 계산, 압력 계산, 속도 계산, 연비 계산, 데이터 계산"
+        />
+      </Head>
+      <Container style={{ width: "80%" }}>
+        <h1 style={{ marginTop: "10px" }}>예금 계산기</h1>
+        <Nav
+          fill
+          variant="tabs"
+          defaultActiveKey="/"
+          onSelect={handleSelect}
+          style={{ marginTop: "10px", marginBottom: "20px" }}
+        >
+          <Nav.Item>
+            <Nav.Link href="/Calculator/Interest">적금</Nav.Link>
+          </Nav.Item>
+          <Nav.Item>
+            <Nav.Link eventKey="/Calculator/Deposit">예금</Nav.Link>
+          </Nav.Item>
+        </Nav>
+        <div className="Interest">
+          <Form onSubmit={handleSubmit}>
+            <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+              <Form.Label>
+                <h5>예치 금액</h5>
+              </Form.Label>
+              <Form.Control
+                type="number"
+                min="0"
+                name="monthlyDeposit"
+                value={inputValues.monthlyDeposit}
+                onChange={handleInputChange}
+                required
+              />
+              <Form.Label
+                style={{ float: "right", fontWeight: "500", marginTop: "10px" }}
+              >
+                <p>{commaFormat(inputValues.monthlyDeposit)} 원</p>
+              </Form.Label>
+            </Form.Group>
+
+            <Form.Group className="mb-4" controlId="exampleForm.ControlInput2">
+              <Form.Label>
+                <h5 style={{ marginTop: "20px" }}>예금 기간</h5>
+              </Form.Label>
+              <Form.Control
+                type="number"
+                min="0"
+                name="termLength"
+                value={inputValues.termLength}
+                onChange={handleInputChange}
+                required
+              />
+              <div
+                style={{ float: "right", fontWeight: "500", marginTop: "10px" }}
+              >
+                <input
+                  type="radio"
+                  name="termUnit"
+                  value="months"
+                  checked={inputValues.termUnit === "months"}
+                  onChange={handleRadioChange}
+                />
+                개월
+                <input
+                  style={{ marginLeft: "24px" }}
+                  type="radio"
+                  name="termUnit"
+                  value="years"
+                  checked={inputValues.termUnit === "years"}
+                  onChange={handleRadioChange}
+                />
+                년
+              </div>
+            </Form.Group>
+            <Form.Group>
+              <h5 style={{ marginTop: "50px" }}>이자율(%)</h5>
+              <Form.Control
+                type="number"
+                name="interestRate"
+                min="0"
+                value={inputValues.interestRate}
+                onChange={handleInputChange}
+                required
+              />
+              <div
+                style={{ float: "right", fontWeight: "500", marginTop: "10px" }}
+              >
+                <input
+                  type="radio"
+                  name="isCompoundInterest"
+                  value="simple"
+                  checked={inputValues.isCompoundInterest === "simple"}
+                  onChange={handleRadioChange}
+                />
+                단리
+                <input
+                  style={{ marginLeft: "10px" }}
+                  type="radio"
+                  name="isCompoundInterest"
+                  value="compound"
+                  checked={inputValues.isCompoundInterest === "compound"}
+                  onChange={handleRadioChange}
+                />
+                복리
+              </div>
+            </Form.Group>
+            <br />
+
+            <Button
+              style={{ width: "100%", marginBottom: "20px", marginTop: "30px" }}
+              type="submit"
             >
-              <p>{commaFormat(inputValues.monthlyDeposit)} 원</p>
-            </Form.Label>
-          </Form.Group>
+              계산
+            </Button>
+            {result[0] && (
+              <div className="Interest-result">
+                <h5>일반과세</h5>
+                <div>
+                  원금합계:{" "}
+                  <span style={{ fontWeight: "700" }}>
+                    {commaFormat(result[2])} 원
+                  </span>
+                </div>
+                <div>
+                  세전이자:{" "}
+                  <span style={{ fontWeight: "700" }}>
+                    {commaFormat(result[3])} 원
+                  </span>
+                </div>
+                <div style={{ color: "red" }}>
+                  이자과세(15.4%):{" "}
+                  <span style={{ fontWeight: "700" }}>
+                    -{commaFormat(result[4])} 원
+                  </span>
+                </div>
+                <div>
+                  세후 수령액:{" "}
+                  <span style={{ fontWeight: "700" }}>
+                    {commaFormat(result[1])} 원
+                  </span>
+                </div>
 
-          <Form.Group className="mb-4" controlId="exampleForm.ControlInput2">
-            <Form.Label>
-              <h5 style={{ marginTop: "20px" }}>예금 기간</h5>
-            </Form.Label>
-            <Form.Control
-              type="number"
-              min="0"
-              name="termLength"
-              value={inputValues.termLength}
-              onChange={handleInputChange}
-              required
-            />
-            <div
-              style={{ float: "right", fontWeight: "500", marginTop: "10px" }}
-            >
-              <input
-                type="radio"
-                name="termUnit"
-                value="months"
-                checked={inputValues.termUnit === "months"}
-                onChange={handleRadioChange}
-              />
-              개월
-              <input
-                style={{ marginLeft: "24px" }}
-                type="radio"
-                name="termUnit"
-                value="years"
-                checked={inputValues.termUnit === "years"}
-                onChange={handleRadioChange}
-              />
-              년
-            </div>
-          </Form.Group>
-          <Form.Group>
-            <h5 style={{ marginTop: "50px" }}>이자율(%)</h5>
-            <Form.Control
-              type="number"
-              name="interestRate"
-              min="0"
-              value={inputValues.interestRate}
-              onChange={handleInputChange}
-              required
-            />
-            <div
-              style={{ float: "right", fontWeight: "500", marginTop: "10px" }}
-            >
-              <input
-                type="radio"
-                name="isCompoundInterest"
-                value="simple"
-                checked={inputValues.isCompoundInterest === "simple"}
-                onChange={handleRadioChange}
-              />
-              단리
-              <input
-                style={{ marginLeft: "10px" }}
-                type="radio"
-                name="isCompoundInterest"
-                value="compound"
-                checked={inputValues.isCompoundInterest === "compound"}
-                onChange={handleRadioChange}
-              />
-              복리
-            </div>
-          </Form.Group>
-          <br />
+                <div className="jb-division-line"></div>
 
-          <Button
-            style={{ width: "100%", marginBottom: "20px", marginTop: "30px" }}
-            type="submit"
-          >
-            계산
-          </Button>
-          {result[0] && (
-            <div className="Interest-result">
-              <h5>일반과세</h5>
-              <div>
-                원금합계:{" "}
-                <span style={{ fontWeight: "700" }}>
-                  {commaFormat(result[2])} 원
-                </span>
-              </div>
-              <div>
-                세전이자:{" "}
-                <span style={{ fontWeight: "700" }}>
-                  {commaFormat(result[3])} 원
-                </span>
-              </div>
-              <div style={{ color: "red" }}>
-                이자과세(15.4%):{" "}
-                <span style={{ fontWeight: "700" }}>
-                  -{commaFormat(result[4])} 원
-                </span>
-              </div>
-              <div>
-                세후 수령액:{" "}
-                <span style={{ fontWeight: "700" }}>
-                  {commaFormat(result[1])} 원
-                </span>
-              </div>
+                <h5>비과세</h5>
+                <div>
+                  원금합계:{" "}
+                  <span style={{ fontWeight: "700" }}>
+                    {commaFormat(result[2])} 원
+                  </span>
+                </div>
+                <div>
+                  세전이자:{" "}
+                  <span style={{ fontWeight: "700" }}>
+                    {commaFormat(result[3])} 원
+                  </span>
+                </div>
+                <div style={{ color: "red" }}>
+                  이자과세(0%): <span style={{ fontWeight: "700" }}>0 원</span>
+                </div>
+                <div>
+                  세후 수령액:{" "}
+                  <span style={{ fontWeight: "700" }}>
+                    {commaFormat(result[0])} 원
+                  </span>
+                </div>
 
-              <div className="jb-division-line"></div>
+                <div className="jb-division-line"></div>
 
-              <h5>비과세</h5>
-              <div>
-                원금합계:{" "}
-                <span style={{ fontWeight: "700" }}>
-                  {commaFormat(result[2])} 원
-                </span>
+                <div className="Interest-info">
+                  <p>
+                    ※ 월단위로 계산된 이자이기 때문에 일단위로 계산되는
+                    금융기관의 적금이자와는 차이가 있습니다.
+                  </p>
+                  <p>
+                    ※ 오차 가능성 안내 <br />본 대출금 상환 계산기는 월 단위로
+                    계산 한 것이므로, 실제 대출 시작 일자에 일할 계산에 따른
+                    약간의 차이는 있을 수 있습니다.
+                  </p>
+                </div>
               </div>
-              <div>
-                세전이자:{" "}
-                <span style={{ fontWeight: "700" }}>
-                  {commaFormat(result[3])} 원
-                </span>
-              </div>
-              <div style={{ color: "red" }}>
-                이자과세(0%): <span style={{ fontWeight: "700" }}>0 원</span>
-              </div>
-              <div>
-                세후 수령액:{" "}
-                <span style={{ fontWeight: "700" }}>
-                  {commaFormat(result[0])} 원
-                </span>
-              </div>
-
-              <div className="jb-division-line"></div>
-
-              <div className="Interest-info">
-                <p>
-                  ※ 월단위로 계산된 이자이기 때문에 일단위로 계산되는 금융기관의
-                  적금이자와는 차이가 있습니다.
-                </p>
-                <p>
-                  ※ 오차 가능성 안내 <br />본 대출금 상환 계산기는 월 단위로
-                  계산 한 것이므로, 실제 대출 시작 일자에 일할 계산에 따른
-                  약간의 차이는 있을 수 있습니다.
-                </p>
-              </div>
-            </div>
-          )}
-        </Form>
-      </div>
-    </Container>
+            )}
+          </Form>
+        </div>
+      </Container>
+    </>
   );
 };
 
