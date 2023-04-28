@@ -49,7 +49,7 @@ const DateCal = () => {
   }
 
   return (
-    <Container>
+    <Container style={{ width: "80%" }}>
       <h1 style={{ marginTop: "10px" }}>날짜 계산기</h1>
       <div className="DateCal">
         <Form>

@@ -157,7 +157,7 @@ const Interest = () => {
   };
 
   return (
-    <Container>
+    <Container style={{ width: "80%" }}>
       <h1 style={{ marginTop: "10px" }}>적금 계산기</h1>
       <Nav
         fill

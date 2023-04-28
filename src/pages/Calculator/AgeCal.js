@@ -70,9 +70,9 @@ const AgeCal = () => {
   };
 
   return (
-    <Container>
+    <Container style={{ width: "80%" }}>
       <h1 style={{ marginTop: "10px" }}>만 나이 계산기</h1>
-      <div className="AgeeCal">
+      <div className="AgeCal">
         <Form>
           <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
             <Form.Label>

@@ -31,7 +31,7 @@ const HourlyWageCal = () => {
   }
 
   return (
-    <Container>
+    <Container style={{ width: "80%" }}>
       <h1 style={{ marginTop: "10px" }}>시급 계산기</h1>
       <div className="HourlyWage">
         <Form>

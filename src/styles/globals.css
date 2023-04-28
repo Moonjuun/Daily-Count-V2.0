@@ -61,14 +61,28 @@
 }
 
 /* 이자 계산 */
-div.Interest {
+.Interest {
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
 /* 시급 계산 */
-div.HourlyWage {
+.HourlyWage {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.AgeCal {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 글자 수 세기 */
+.WordCal {
+  width: 100%;
   flex-direction: column;
   align-items: center;
   justify-content: center;
