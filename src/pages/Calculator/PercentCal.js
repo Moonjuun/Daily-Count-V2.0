@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import Form from "react-bootstrap/Form";
 import Container from "react-bootstrap/Container";
 import Button from "react-bootstrap/Button";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
 
 const PercentageCal = () => {
   const [number1, setNumber1] = useState(0);
@@ -32,37 +30,35 @@ const PercentageCal = () => {
       <div className="PercentCal">
         <Form>
           <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-            <Row>
-              <Form.Label>
-                <h5 style={{ marginTop: "20px" }}>전체값</h5>
-              </Form.Label>
-              <Form.Control
-                style={{ marginTop: "10px", marginBottom: "10px" }}
-                type="number"
-                value={number1}
-                onFocus={() => {
-                  setNumber1("");
-                  setResult("");
-                }}
-                onChange={handleNumber1Change}
-              />
-              <Form.Label>
-                <h5 style={{ marginTop: "20px" }}>일부값</h5>
-              </Form.Label>
-              <Form.Control
-                style={{ marginTop: "10px", marginBottom: "10px" }}
-                type="number"
-                value={number2}
-                onFocus={() => {
-                  setNumber2("");
-                  setResult("");
-                }}
-                onChange={handleNumber2Change}
-              />{" "}
-              <Form.Label>
-                <h5 style={{ marginTop: "20px" }}></h5>
-              </Form.Label>
-            </Row>
+            <Form.Label>
+              <h5 style={{ marginTop: "20px" }}>전체값</h5>
+            </Form.Label>
+            <Form.Control
+              style={{ marginTop: "10px", marginBottom: "10px" }}
+              type="number"
+              value={number1}
+              onFocus={() => {
+                setNumber1("");
+                setResult("");
+              }}
+              onChange={handleNumber1Change}
+            />
+            <Form.Label>
+              <h5 style={{ marginTop: "20px" }}>일부값</h5>
+            </Form.Label>
+            <Form.Control
+              style={{ marginTop: "10px", marginBottom: "10px" }}
+              type="number"
+              value={number2}
+              onFocus={() => {
+                setNumber2("");
+                setResult("");
+              }}
+              onChange={handleNumber2Change}
+            />{" "}
+            <Form.Label>
+              <h5 style={{ marginTop: "20px" }}></h5>
+            </Form.Label>
           </Form.Group>
         </Form>
 
