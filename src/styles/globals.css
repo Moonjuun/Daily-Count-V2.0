@@ -93,3 +93,10 @@
   align-items: center;
   justify-content: center;
 }
+
+/* 퍼센트 계산기 */
+.PercentCal {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
