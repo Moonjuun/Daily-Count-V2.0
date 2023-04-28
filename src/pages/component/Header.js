@@ -11,7 +11,7 @@ function Header() {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link href="/">일반 계산기</Nav.Link>
-            <Nav.Link href="#link">단위 계산기</Nav.Link>
+            <Nav.Link href="/Calculator/Convert/AreaCal">단위 계산기</Nav.Link>
             <Nav.Link href="#link">이자 계산기</Nav.Link>
             <Nav.Link href="#link">시급 계산기</Nav.Link>
             <Nav.Link href="#link">날짜 계산기</Nav.Link>
