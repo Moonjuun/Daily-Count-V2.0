@@ -13,7 +13,7 @@ function Header() {
             <Nav.Link href="/">일반 계산기</Nav.Link>
             <Nav.Link href="/Calculator/Convert/AreaCal">단위 계산기</Nav.Link>
             <Nav.Link href="/Calculator/Interest">이자 계산기</Nav.Link>
-            <Nav.Link href="#link">시급 계산기</Nav.Link>
+            <Nav.Link href="/Calculator/HourlyWageCal">시급 계산기</Nav.Link>
             <Nav.Link href="#link">날짜 계산기</Nav.Link>
             <Nav.Link href="#link">만나이 계산기</Nav.Link>
             <Nav.Link href="#link">글자수 계산기</Nav.Link>
