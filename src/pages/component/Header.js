@@ -17,7 +17,7 @@ function Header() {
             <Nav.Link href="/Calculator/DateCal">날짜 계산기</Nav.Link>
             <Nav.Link href="/Calculator/AgeCal">만나이 계산기</Nav.Link>
             <Nav.Link href="/Calculator/WordCal">글자수 계산기</Nav.Link>
-            <Nav.Link href="#link">비만도 계산기</Nav.Link>
+            <Nav.Link href="/Calculator/BmiCal">비만도 계산기</Nav.Link>
             <Nav.Link href="#link">퍼센트 계산기</Nav.Link>
           </Nav>
         </Navbar.Collapse>

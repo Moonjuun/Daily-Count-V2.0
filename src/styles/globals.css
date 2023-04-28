@@ -82,7 +82,13 @@
 
 /* 글자 수 세기 */
 .WordCal {
-  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 비만도 계산기 */
+.BmiCal {
   flex-direction: column;
   align-items: center;
   justify-content: center;
