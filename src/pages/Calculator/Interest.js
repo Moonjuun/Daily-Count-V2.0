@@ -213,7 +213,7 @@ const Interest = () => {
           style={{ marginTop: "10px", marginBottom: "20px" }}
         >
           <Nav.Item>
-            <Nav.Link href="/Calculator/Interest">적금</Nav.Link>
+            <Nav.Link eventKey="/Calculator/Interest">적금</Nav.Link>
           </Nav.Item>
           <Nav.Item>
             <Nav.Link eventKey="/Calculator/Deposit">예금</Nav.Link>
