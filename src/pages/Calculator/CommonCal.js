@@ -85,12 +85,13 @@ const CommonCal = () => {
 
   return (
     <>
-      <h1 style={{ marginTop: "60px", marginBottom: "30px" }}>계산기</h1>
+      <h1 style={{ marginTop: "30px", marginBottom: "30px" }}>계산기</h1>
       <div className="CommonCal">
-        <div className="result">{Number(result).toLocaleString("ko-KR")}</div>{" "}
         <div className="calculator">
+          <div className="result">{Number(result).toLocaleString("ko-KR")}</div>{" "}
           <div className="button-row">
             <Button
+              style={{}}
               className="button button-ac"
               onClick={() => handleClick("AC")}
             >
