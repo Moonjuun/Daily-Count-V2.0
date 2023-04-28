@@ -57,6 +57,17 @@ export default function Home() {
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-C4ER74BPMR"
         ></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-C4ER74BPMR');
+          `,
+          }}
+        />
       </Head>
       <CommonCal></CommonCal>
     </>
