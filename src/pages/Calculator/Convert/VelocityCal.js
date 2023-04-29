@@ -48,7 +48,7 @@ const VelocityCal = () => {
   return (
     <>
       <Head>
-        <title>Dail Count 데일리 카운트 - 속도 계산기</title>
+        <title>Daily Count 데일리 카운트 - 속도 계산기</title>
         <meta charset="utf-8" />
         <meta name="referrer" content="always" />
         <meta
