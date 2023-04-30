@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
-import Button from "react-bootstrap/Button";
-import ButtonGroup from "react-bootstrap/ButtonGroup";
-import ButtonToolbar from "react-bootstrap/ButtonToolbar";
+import { commaFormat, uncommaFormat } from "@/utils/util";
+import { Container, Button } from "react-bootstrap";
 
 const CommonCal = () => {
   const [result, setResult] = useState("0");
@@ -84,11 +83,11 @@ const CommonCal = () => {
   });
 
   return (
-    <>
+    <Container>
       <h1 style={{ marginTop: "30px", marginBottom: "30px" }}>계산기</h1>
       <div className="CommonCal">
         <div className="calculator">
-          <div className="result">{Number(result).toLocaleString("ko-KR")}</div>{" "}
+          <div className="result">{Number(result)}</div>{" "}
           <div className="button-row">
             <Button
               style={{}}
@@ -192,7 +191,7 @@ const CommonCal = () => {
           </div>
         </div>
       </div>
-    </>
+    </Container>
   );
 };
 
