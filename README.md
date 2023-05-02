@@ -1,38 +1,50 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# daily-count 데일리카운트 v2.0
+
+## Purpose
+
+- 기존 v1.0버전은 CRA로 만든 프로젝트라 SEO 최적화에 한계가 있었음
+- SSR을 지원하는 Next.JS를 통해 SSR 최적화 향상에 그 목적을 둠
+
+## Tech stack
+
+`React`,`Next.JS`, `AWS S3`, `React-bootstrap`
 
 ## Getting Started
 
-First, run the development server:
+#### Install
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+```
+npm i
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+#### Build
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+```
+npx next build
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+#### Start
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+```
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Site
 
-## Learn More
+https://daily-count.com
 
-To learn more about Next.js, take a look at the following resources:
+## Version
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- 1.1.0 공유 기능 추가 2023-04-11
+- 1.2.0 시급 계산기 추가 2023-04-11
+- 1.2.1 퍼센트 계산기 공식, css 수정 2023-04-11
+- 1.2.2 CommonCal 버그 픽스 및 개선, React-snap 설치 2023-04-12
+- 1.2.3 오픈그랩 수정 2023-04-12
+- 1.2.4 sdk 버전으로 인한 카카오톡 공유 에러 픽스 2023-04-12
+- 1.2.5 CommonCal 버그 픽스 및 개선 2023-04-12
+- 1.3.6 CommonCal 코드 수정 2023-04-13
+- 1.4.6 적금 계산 추가 2023-04-17
+- 1.4.7 메뉴바 수정 및 버그 픽스 2023-04-17
+- 1.5.7 예금 계산기 추가 2023-04-19
+- 1.6.7 만 나이 계산기 추가 2023-04-20
+- 2.6.7 NEXT.JS로 전환 2023-04-29
